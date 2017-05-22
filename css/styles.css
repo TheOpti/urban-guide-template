@@ -13,13 +13,26 @@ section {
   width: 75%;
   height: 100%;
   margin: 0 auto;
-  border: 1px solid blue; }
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid black;
+  padding: 5px 0; }
 
 .navigation {
+  width: 75%;
   display: flex;
   justify-content: space-between;
   margin: 5px auto; }
   .navigation--menu {
-    display: flex; }
+    display: flex;
+    text-transform: uppercase; }
   .navigation--menu-item {
     margin: 0 15px; }
