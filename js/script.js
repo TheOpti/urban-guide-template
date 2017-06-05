@@ -5,14 +5,10 @@ $(document).ready(() => {
   let navBar = $('#nav-bar');
   navBar.addClass("navigation--theme-default");
 
+  changeNavBar();
+
   $(window).on('scroll', (event) => {
-    if (window.scrollY > 50) {
-      navBar.removeClass('navigation--theme-default');
-      navBar.addClass('navigation--theme-fixed');
-    } else {
-      navBar.removeClass('navigation--theme-fixed');
-      navBar.addClass('navigation--theme-default');
-    }
+    changeNavBar();
   });
 
   navBar.on('click', (event) => {
@@ -24,4 +20,14 @@ $(document).ready(() => {
       }, 750);
     }
   });
-})
+
+  function changeNavBar() {
+    if (window.scrollY > 50) {
+      navBar.removeClass('navigation--theme-default');
+      navBar.addClass('navigation--theme-fixed');
+    } else {
+      navBar.removeClass('navigation--theme-fixed');
+      navBar.addClass('navigation--theme-default');
+    }
+  }
+});
