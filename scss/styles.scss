@@ -23,16 +23,6 @@ section {
   border: 1px solid black;
 }
 
-.row {
-  width: 75%;
-  height: 100%;
-  margin: 0 auto;
-  border: 1px solid blue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .navigation {
   position: fixed;
   top: 0;
@@ -43,7 +33,7 @@ section {
   transition: height 0.5s, background-color 1s;
 
   &--theme-default {
-    background-color: transparent;
+    background-color: rgba(0,0,0,0.4);
     color: white;
     height: 50px;
     border-bottom: 1px solid white;
@@ -99,10 +89,11 @@ section {
   &__menu-item {
     position: relative;
     padding: 5px 10px;
-    letter-spacing: 0.7px;
+    letter-spacing: 1.7px;
     overflow: hidden;
     display: flex;
     align-items: center;
+    font-weight: bold;
 
     &:before {
      box-sizing: border-box;
@@ -152,13 +143,37 @@ section {
   }
 }
 
-.section {
+.main-section {
+  background-image: url("../assets/main-section.jpg");
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &--main {
-    color: white;
-
-    background-image: url("../assets/petronas-mini.jpg");
-    background-size: cover;
+  &__title-block {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 60px;
+    background: rgba(0,0,0,0.5);
   }
 
+  &__title {
+    width: 80%;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+
+  &__description {
+    font-size: 20px;
+    margin-top: 30px;
+  }
 }
