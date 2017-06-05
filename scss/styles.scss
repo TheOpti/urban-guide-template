@@ -7,6 +7,15 @@ html, body {
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+@font-face {
+    font-family: 'trenchthin';
+    src: url('../fonts/trench100free-webfont.woff2') format('woff2'),
+         url('../fonts/trench100free-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 section {
@@ -31,7 +40,7 @@ section {
   right: 0;
   border-bottom: 1px solid black;
 
-  height: 45px;
+  height: 50px;
 
   background-color: white;
   color: black;
@@ -47,7 +56,13 @@ section {
   }
 
   &--logo {
-
+    font-family: 'trenchthin', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: default;
   }
 
   &--menu {
@@ -60,6 +75,8 @@ section {
     padding: 5px 10px;
     letter-spacing: 0.7px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 
     &:before {
      box-sizing: border-box;
