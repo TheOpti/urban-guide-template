@@ -18,9 +18,42 @@ html, body {
     font-style: normal;
 }
 
-section {
-  height: 100vh;
+.section {
+  width: 80%;
+  margin: 0 auto;
   border: 1px solid black;
+
+  &--full {
+    height: 100vh;
+  }
+
+  &__title-section {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    text-align: center;
+    width: 80%;
+    color: #777;
+  }
+
+  &__divider {
+    width: 300px;
+    margin: 25px auto 0;
+    border: 0;
+    border-top: 2px solid #eee;
+  }
 }
 
 .navigation {
