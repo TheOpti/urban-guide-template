@@ -1,9 +1,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var bs = require('browser-sync').create();
+var cleanCSS = require('gulp-clean-css');
+var browserSync = require('browser-sync').create();
 
-gulp.task('browser-sync', ['sass'], function() {
-    bs.init({
+gulp.task('browser-sync', ['sass', 'minify-css'], function() {
+    browserSync.init({
         server: {
             baseDir: "./"
         }
@@ -12,12 +13,18 @@ gulp.task('browser-sync', ['sass'], function() {
 
 gulp.task('sass', function () {
     return gulp.src('scss/*.scss')
-                .pipe(sass())
-                .pipe(gulp.dest('css'))
-                .pipe(bs.reload({stream: true}));
+      .pipe(sass())
+      .pipe(gulp.dest('css'))
+      .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', ['browser-sync'], function () {
-    gulp.watch("scss/*.scss", ['sass']);
-    gulp.watch("*.html").on('change', bs.reload);
+    gulp.watch("scss/*.scss", ['sass', 'minify-css']);
+    gulp.watch("*.html").on('change', browserSync.reload);
+});
+
+gulp.task('minify-css', ['sass'], function() {
+  return gulp.src('css/*.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest('css'));
 });
