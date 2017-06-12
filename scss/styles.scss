@@ -54,6 +54,16 @@ html, body {
     border: 0;
     border-top: 2px solid #eee;
   }
+
+  &__footer {
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+  }
+
 }
 
 .navigation {
