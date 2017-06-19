@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
+
   <script src="libs/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
 </head>
@@ -42,7 +43,7 @@
     </div>
   </nav>
 
-  <section class="main-section section--full" id="home">
+  <section class="main-section section--full-height section--shorter-width" id="home">
     <div class="main-section__title-block">
       <div class="main-section__title">
         A BRAND ECOSYSTEM AGENCY
@@ -53,7 +54,7 @@
     </div>
   </section>
 
-  <section class="section section--full" id="about-us">
+  <section class="section section--full-height section--shorter-width" id="about-us">
     <div class="section__title-section">
       <div class="section__title">
         About us
@@ -92,7 +93,7 @@
 
   </section>
 
-  <section class="section--full" id="offer">
+  <section class="section section--full-height section--shorter-width" id="offer">
     <div class="section__title-section">
       <div class="section__title">
         Offer
@@ -104,7 +105,7 @@
     </div>
   </section>
 
-  <section class="section--full" id="portfolio">
+  <section class="section section--full-height section--shorter-width" id="portfolio">
     <div class="section__title-section">
       <div class="section__title">
         Portfolio
@@ -116,7 +117,7 @@
     </div>
   </section>
 
-  <section class="section--full" id="contact">
+  <section class="section section--full-height section--full-width" id="contact">
     <div class="section__title-section">
       <div class="section__title">
         Contact us
@@ -125,6 +126,34 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit!
       </div>
       <hr class="section__divider" />
+    </div>
+    <div class="section__content-section">
+
+      <div id="googleMap" style="width:100vw; height:400px; margin-top: 50px;"></div>
+
+
+      <script>
+        function myMap() {
+          var mapProp = {
+            center: new google.maps.LatLng(51.508742,-0.120850),
+            zoom: 15,
+            clickableIcons: true,
+            disableDefaultUI: true
+          };
+
+          var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+          var marker = new google.maps.Marker({position: mapProp.center});
+
+          marker.setMap(map);
+        }
+
+      </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEei-dykNsihzpX9mUA_t1MMOkIR7AEzA&callback=myMap"></script>
+
+
+
     </div>
   </section>
 
