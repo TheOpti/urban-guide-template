@@ -12,7 +12,7 @@ gulp.task('browser-sync', ['sass', 'minify-css'], function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src('scss/*.scss')
+  return gulp.src('scss/styles.scss')
     .pipe(sass())
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({
