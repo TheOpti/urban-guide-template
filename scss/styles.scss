@@ -19,16 +19,17 @@ html, body {
 }
 
 .section {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 
   &--full {
     height: 100vh;
   }
 
   &__title-section {
-    margin-top: 100px;
+    padding-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,6 +41,78 @@ html, body {
     font-weight: 600;
     font-size: 50px;
     margin-bottom: 20px;
+  }
+
+  &__content-section {
+    display: flex;
+    flex: 1;
+  }
+
+  &__about-left-col {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p {
+      font-size: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #777;
+      margin-top: 50px;
+    }
+
+    ul {
+      list-style-type: none;
+
+      li {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  &__about-right-col {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+
+    div {
+      flex: 1;
+    }
+  }
+
+  &__about-right-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    font-size: 24px;
+    flex: 4;
+
+    p {
+      position: relative;
+      padding: 20px 0 20px 45px;
+      border-left: 7px solid #ccc;
+
+      &:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 75px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+      }
+    }
+  }
+
+  &__about-right-image {
+    flex: 6;
+    background-image: url("../assets/pic1.jpg");
+    background-size: cover;
+    width: 80%;
+    margin: 0 auto;
   }
 
   &__description {
@@ -96,6 +169,7 @@ html, body {
     color: black;
     height: 60px;
     border-bottom: 1px solid black;
+    z-index: 1;
 
     .navigation__bar {
       width: 85%;
