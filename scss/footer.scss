@@ -1,8 +1,110 @@
 .footer {
-  height: 15vh;
+  min-height: 30vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   color: white;
   background-color: black;
+
+  &__logo {
+    width: 75%;
+    margin: 30px auto 15px auto;
+    font-family: 'trenchthin', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: default;
+    padding-left: 5px;
+  }
+
+  &__site-info {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__github-icon {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px -7px;
+
+    i {
+      font-size: 30px;
+    }
+  }
+
+  &__address-line {
+    display: block;
+    margin: 7px 0;
+    font-size: 14px;
+
+    &:last-of-type {
+      display: block;
+      margin-top: 25px;
+    }
+  }
+
+  &__created-by {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__sm-section {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sm-icons {
+    display: flex;
+  }
+
+  &__sm-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    margin: 0 5px;
+    cursor: pointer;
+
+    i {
+      font-size: 20px;
+    }
+
+    &--facebook {
+      background-color: #3b5998;
+    }
+
+    &--twitter {
+      background-color: #55acee;
+    }
+
+    &--instagram {
+      background-color: #e95950;
+    }
+
+    &--gplus {
+      background-color: #dd4b39;
+    }
+
+    &--linkedin {
+      background-color: #007bb5;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: right;
+  }
+
+  &__copyright-entry {
+    margin: 10px 0;
+  }
 }
