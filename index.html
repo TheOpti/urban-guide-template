@@ -12,9 +12,8 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 
-
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="libs/jquery-3.2.1.min.js"></script>
-  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -202,26 +201,7 @@
     </div>
   </div>
 
-  <script>
-    function myMap() {
-      var mapProp = {
-        center: new google.maps.LatLng(51.508742, -0.120850),
-        zoom: 15,
-        clickableIcons: true,
-        disableDefaultUI: true,
-        scrollwheel: false
-      };
-
-      var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-      var marker = new google.maps.Marker({
-        position: mapProp.center
-      });
-
-      marker.setMap(map);
-    }
-  </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEei-dykNsihzpX9mUA_t1MMOkIR7AEzA&callback=myMap"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
