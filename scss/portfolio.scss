@@ -1,0 +1,86 @@
+.portfolio-section {
+
+  &__images-row {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    margin: 25px 0;
+  }
+
+  &__image {
+    background-size: cover;
+    margin: 25px 0;
+    flex: 1;
+    height: 275px;
+    cursor: pointer;
+    position: relative;
+
+    &:first-child {
+      background-image: url("../assets/pic1.jpg");
+      min-width: 30%;
+    }
+
+    &:nth-child(2) {
+      background-image: url("../assets/pic2.jpg");
+      margin-left: 20px;
+      margin-right: 20px;
+      min-width: 30%;
+    }
+
+    &:nth-child(3) {
+      background-image: url("../assets/pic3.jpg");
+      min-width: 30%;
+    }
+
+    &:nth-child(4) {
+      background-image: url("../assets/pic4.jpg");
+      min-width: 100%;
+    }
+
+    &:nth-child(5) {
+      background-image: url("../assets/pic5.jpg");
+      min-width: 45%;
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      background-image: url("../assets/pic6.jpg");
+      min-width: 45%;
+      margin-left: 20px;
+    }
+
+    &:hover {
+      .portfolio-section__image-content {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image-content {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    height: 100%;
+    width: 100%;
+    transition: all 0.35s;
+  }
+
+  &__title {
+    font-size: 28px;
+  }
+
+  &__description {
+    font-size: 18px;
+    margin-top: 10px;
+    width: 70%;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+}
