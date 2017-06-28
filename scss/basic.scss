@@ -15,12 +15,14 @@ html {
   width: 100%;
   height: 100%;
 }
+
 @font-face {
   font-family: 'trenchthin';
   src: url('../fonts/trench100free-webfont.woff2') format('woff2'), url('../fonts/trench100free-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'fontello';
   src: url('../fonts/fontello.woff2') format('woff2'), url('../fonts/fontello.woff') format('woff');
@@ -47,34 +49,19 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cancel:before {
-  content: '\e800';
-}
-
-.icon-twitter:before {
-  content: '\f099';
-}
-
-.icon-menu:before {
-  content: '\f0c9';
-}
-
-.icon-gplus:before {
-  content: '\f0d5';
-}
-
-.icon-linkedin:before {
-  content: '\f0e1';
-}
-
-.icon-instagram:before {
-  content: '\f16d';
-}
-
-.icon-github-squared:before {
-  content: '\f300';
-}
-
-.icon-facebook-squared:before {
-  content: '\f308';
-}
+.icon-play-circled2:before { content: '\e800'; }
+.icon-pencil:before { content: '\e801'; }
+.icon-search:before { content: '\e802'; }
+.icon-target:before { content: '\e803'; }
+.icon-user:before { content: '\e804'; }
+.icon-location:before { content: '\e805'; }
+.icon-mobile:before { content: '\f10b'; }
+.icon-paper-plane:before { content: '\f1d8'; }
+.icon-address-book-o:before { content: '\f2ba'; }
+.icon-address-card-o:before { content: '\f2bc'; }
+.icon-facebook:before { content: '\f300'; }
+.icon-twitter-bird:before { content: '\f303'; }
+.icon-github:before { content: '\f308'; }
+.icon-googleplus-rect:before { content: '\f309'; }
+.icon-linkedin:before { content: '\f31a'; }
+.icon-instagram-filled:before { content: '\f31f'; }
