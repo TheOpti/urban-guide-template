@@ -1,6 +1,7 @@
 @import 'basic';
 @import 'navigation';
 @import 'main-section';
+@import 'about-us';
 @import 'offer';
 @import 'portfolio';
 @import 'contact';
@@ -38,79 +39,16 @@
     margin-bottom: 20px;
   }
 
-  &__content-section {
-    display: flex;
-    flex: 1;
-  }
-
-  &__about-left-col {
-    flex: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    p {
-      font-size: 20px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #777;
-      margin-top: 50px;
-    }
-
-    ul li {
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 1.2;
-    }
-  }
-
-  &__about-right-col {
-    flex: 6;
-    display: flex;
-    flex-direction: column;
-
-    div {
-      flex: 1;
-    }
-  }
-
-  &__about-right-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 30px;
-    font-size: 24px;
-    flex: 4;
-
-    p {
-      position: relative;
-      padding: 20px 0 20px 45px;
-      border-left: 7px solid #ccc;
-
-      &:before {
-        color: #ccc;
-        content: open-quote;
-        font-size: 75px;
-        position: absolute;
-        top: 0;
-        left: 10px;
-      }
-    }
-  }
-
-  &__about-right-image {
-    flex: 6;
-    background-image: url("../assets/pic1.jpg");
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto;
-  }
-
   &__description {
     text-align: center;
     width: 80%;
     color: #777;
     font-size: 20px;
+  }
+
+  &__content-section {
+    display: flex;
+    flex: 1;
   }
 
   &__divider {
