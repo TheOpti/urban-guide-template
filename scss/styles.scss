@@ -1,6 +1,7 @@
 @import 'basic';
 @import 'navigation';
 @import 'main-section';
+@import 'offer';
 @import 'portfolio';
 @import 'contact';
 @import 'footer';
@@ -109,6 +110,7 @@
     text-align: center;
     width: 80%;
     color: #777;
+    font-size: 20px;
   }
 
   &__divider {
