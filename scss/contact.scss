@@ -3,14 +3,69 @@
   flex-direction: column;
   flex: 1;
 
+  &__description {
+    width: 100%;
+    font-size: 22px;
+    margin: 50px 0;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+    text-align: center;
+  }
+
+  &__contact-info {
+    display: flex;
+    height: 475px;
+  }
+
+  &__contact-team-photo {
+    flex: 1;
+    background: url('../assets/contact-team.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__contact-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0 100px 120px;
+    background-color: #212121;
+    color: white;
+  }
+
+  &__company-name {
+    font-family: 'trenchthin', sans-serif;
+    font-size: 60px;
+    margin: 20px 0;
+  }
+
+  &__company-address {
+    font-size: 20px;
+    line-height: 1.15;
+    margin: 10px 0;
+  }
+
+  &__company-emails {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  &__company-emails-row {
+    margin: 6px 0;
+  }
+
+  &__company-email {
+    display: inline-block;
+    width: 100px;
+  }
+
   &__map {
     width: 100%;
-    height: 450px;
-    margin-top: 50px;
+    height: 550px;
   }
 
   &__form {
-    margin: 50px auto;
+    margin: 90px auto 50px auto;
     width: 70%;
   }
 
