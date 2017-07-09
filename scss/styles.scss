@@ -40,10 +40,12 @@
   }
 
   &__description {
+    width: 100%;
+    font-size: 22px;
+    margin: 50px 0;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
     text-align: center;
-    width: 80%;
-    color: #777;
-    font-size: 20px;
   }
 
   &__content-section {
