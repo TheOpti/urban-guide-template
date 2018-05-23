@@ -7,9 +7,14 @@
     margin: 50px 0 35px;
     font-size: 42px;
     font-weight: 900;
+
+    div {
+      margin: 5px 0;
+    }
   }
 
   &__icons {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -19,6 +24,7 @@
 
   &__icon-part {
     margin: 40px;
+    padding: 30px 20px;
     display: flex;
     align-items: center;
     justify-content: center;

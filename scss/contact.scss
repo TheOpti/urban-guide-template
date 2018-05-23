@@ -1,3 +1,5 @@
+@import 'variables';
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -72,6 +74,10 @@
     align-items: center;
     flex-direction: column;
     margin: 40px auto;
+
+    @media(max-width: $breakpoint-max-border) {
+      width: 85%;
+    }
   }
 
   &__fields-row {

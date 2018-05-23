@@ -50,7 +50,5 @@ $(document).ready(() => {
     marker.setMap(map);
   }
 
-
   changeNavBar();
-
 });

@@ -7,6 +7,13 @@
 @import 'contact';
 @import 'footer';
 
+.container {
+  max-width: $max-width;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
 .section {
   margin: 0 auto;
   display: flex;
@@ -25,7 +32,7 @@
   }
 
   &__title-block {
-    padding-top: 100px;
+    padding-top: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,17 +42,21 @@
   &__title {
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 54px;
     margin-bottom: 20px;
   }
 
   &__description {
     width: 100%;
     font-size: 22px;
-    margin: 50px 0;
+    margin: 50px auto;
     line-height: 1.5;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.1px;
     text-align: center;
+
+    @media(max-width: $breakpoint-max-border) {
+      width: 80%;
+    }
   }
 
   &__content-section {
