@@ -48,9 +48,9 @@ gulp.task('build-css', ['clean'], function() {
 });
 
 
-gulp.task('build-js', ['clean'], function() {
+gulp.task('build-js', ['clean', 'build-html'], function() {
   return gulp.src('./dist/index.html')
-    .pipe(inject(gulp.src(['./dist/script-min.js']).pipe(minify()), {
+    .pipe(inject(gulp.src(['./js/script.js']).pipe(minify({noSource : true})), {
       transform: function (filePath, file) {
         return file.contents.toString('utf8')
       }
