@@ -4,7 +4,7 @@ $(document).ready(() => {
   const navBar = $('#nav-bar');
   navBar.addClass("navigation--theme-default");
 
-  $(window).on('scroll', (event) => {
+  $(window).on('scroll', () => {
     changeNavBar();
   });
 
