@@ -7,23 +7,38 @@
 
   &__contact-info {
     display: flex;
-    height: 475px;
+    min-height: 475px;
+    margin: 20px 0;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+
+    @media(max-width: $breakpoint-desktop) {
+      flex-direction: column;
+    }
   }
 
   &__contact-team-photo {
-    flex: 1;
+    flex: 1 1 100%;
     background: url('../assets/images/contact-team.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media(max-width: $breakpoint-desktop) {
+      min-height: 300px;
+      background-position: 100% 0;
+    }
   }
 
   &__contact-details {
-    flex: 1;
+    flex: 1 1 100%;
     display: flex;
     flex-direction: column;
-    padding: 70px 0 100px 120px;
+    padding: 70px 0 70px 120px;
     background-color: #212121;
     color: white;
+
+    @media(max-width: $breakpoint-desktop) {
+      padding: 20px 0 40px 70px;
+    }
   }
 
   &__company-name {
@@ -54,11 +69,13 @@
 
   &__map {
     width: 100%;
-    height: 550px;
+    height: 500px;
+    border-top: 1px solid lightgrey;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
   }
 
   &__form {
-    margin: 90px auto 50px auto;
+    margin: 60px auto;
     width: 70%;
   }
 
@@ -109,14 +126,14 @@
 
   &__send-btn {
     margin-top: 20px;
-    width: 150px;
+    width: 100%;
     letter-spacing: 1.7px;
     font-weight: 700;
     background-color: white;
     cursor: pointer;
     border: 1px solid black;
     height: 60px;
-    transition: background-color 1s, color 1s;
+    transition: background-color 0.5s, color 0.5s;
     align-self: flex-end;
 
     &:hover {
