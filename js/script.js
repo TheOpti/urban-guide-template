@@ -1,5 +1,7 @@
 const NAVBAR_HEIGHT = 60;
 
+console.log('SCRIPT');
+
 $(document).ready(() => {
   const navBar = $('#nav-bar');
   navBar.addClass("navigation--theme-default");

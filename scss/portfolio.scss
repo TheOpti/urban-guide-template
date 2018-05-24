@@ -17,35 +17,35 @@
     position: relative;
 
     &:first-child {
-      background-image: url("../assets/pic1.jpg");
+      background-image: url("../assets/images/pic1.jpg");
       min-width: 30%;
     }
 
     &:nth-child(2) {
-      background-image: url("../assets/pic2.jpg");
+      background-image: url("../assets/images/pic2.jpg");
       margin-left: 20px;
       margin-right: 20px;
       min-width: 30%;
     }
 
     &:nth-child(3) {
-      background-image: url("../assets/pic3.jpg");
+      background-image: url("../assets/images/pic3.jpg");
       min-width: 30%;
     }
 
     &:nth-child(4) {
-      background-image: url("../assets/pic4.jpg");
+      background-image: url("../assets/images/pic4.jpg");
       min-width: 100%;
     }
 
     &:nth-child(5) {
-      background-image: url("../assets/pic5.jpg");
+      background-image: url("../assets/images/pic5.jpg");
       min-width: 45%;
       margin-right: 20px;
     }
 
     &:last-child {
-      background-image: url("../assets/pic6.jpg");
+      background-image: url("../assets/images/pic6.jpg");
       min-width: 45%;
       margin-left: 20px;
     }
