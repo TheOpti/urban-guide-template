@@ -20,7 +20,8 @@
   flex-direction: column;
 
   &--shorter-width {
-    width: 75%;
+    width: 100%;
+    max-width: 1200px;
   }
 
   &--full-width {
@@ -32,7 +33,7 @@
   }
 
   &__title-block {
-    padding-top: 75px;
+    padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +49,7 @@
 
   &__description {
     width: 100%;
+    max-width: 1200px;
     font-size: 22px;
     margin: 50px auto;
     line-height: 1.5;

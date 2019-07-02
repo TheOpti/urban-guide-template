@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   transition: height 0.5s, background-color 1s;
+  height: 70px;
 
   &__bar {
     display: flex;
@@ -22,7 +23,6 @@
   &--theme-default {
     background-color: rgba(0,0,0,0.4);
     color: white;
-    height: 50px;
     border-bottom: 1px solid white;
 
     .navigation__menu-item:hover:after,
@@ -34,7 +34,6 @@
   &--theme-fixed {
     background-color: white;
     color: black;
-    height: 60px;
     border-bottom: 1px solid black;
     z-index: 1;
 
@@ -61,6 +60,19 @@
   &__menu {
     display: flex;
     text-transform: uppercase;
+  }
+
+  &__menu-btn {
+    display: none;
+    font-size: 21px;
+    border: 1px solid white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 36px;
+    cursor: pointer;
+    padding-right: 1px;
   }
 
   &__menu-item {
@@ -116,3 +128,17 @@
     }
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .navigation {
+    &__menu {
+      position: absolute;
+      top: 60px;
+    }
+
+    &__menu-btn {
+      display: flex;
+    }
+  }
+}
+

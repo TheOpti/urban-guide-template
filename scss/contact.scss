@@ -75,8 +75,9 @@
   }
 
   &__form {
-    margin: 60px auto;
     width: 70%;
+    margin: 50px auto;
+    max-width: 1200px;
   }
 
   &__form-title {
@@ -85,12 +86,12 @@
   }
 
   &__fields {
-    width: 60%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 40px auto;
+    margin: 40px auto 0 auto;
 
     @media(max-width: $breakpoint-max-border) {
       width: 85%;

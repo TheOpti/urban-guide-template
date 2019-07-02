@@ -1,18 +1,8 @@
 const NAVBAR_HEIGHT = 60;
 
-console.log('SCRIPT');
-
 $(document).ready(() => {
   const navBar = $('#nav-bar');
   navBar.addClass("navigation--theme-default");
-
-  $(window).on('scroll', () => {
-    changeNavBar();
-  });
-
-  $(window).on('load', () => {
-    createMap();
-  });
 
   navBar.on('click', (event) => {
     if ($(event.target).hasClass('navigation__menu-item')) {
@@ -23,6 +13,9 @@ $(document).ready(() => {
       }, 750);
     }
   });
+
+  $(window).on('scroll', changeNavBar);
+  $(window).on('load', createMap);
 
   function changeNavBar() {
     if (window.scrollY > 50) {
@@ -35,7 +28,7 @@ $(document).ready(() => {
   }
 
   function createMap() {
-    var mapProp = {
+    const mapProp = {
       center: new google.maps.LatLng(51.508742, -0.120850),
       zoom: 15,
       clickableIcons: true,
@@ -43,9 +36,8 @@ $(document).ready(() => {
       scrollwheel: false
     };
 
-    var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-    var marker = new google.maps.Marker({
+    const map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    const marker = new google.maps.Marker({
       position: mapProp.center
     });
 
