@@ -1,3 +1,5 @@
+@import 'variables';
+
 @import 'basic';
 @import 'navigation';
 @import 'main-section';
@@ -8,7 +10,7 @@
 @import 'footer';
 
 .container {
-  max-width: $max-width;
+  max-width: $breakpoint-large-desktop;
   width: 100%;
   padding: 0 10px;
   margin: 0 auto;
@@ -21,11 +23,7 @@
 
   &--shorter-width {
     width: 100%;
-    max-width: 1200px;
-  }
-
-  &--full-width {
-    width: 100%;
+    max-width: $max-width;
   }
 
   &--full-height {
@@ -33,7 +31,7 @@
   }
 
   &__title-block {
-    padding-top: 50px;
+    padding-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,19 +49,14 @@
     width: 100%;
     max-width: 1200px;
     font-size: 22px;
-    margin: 50px auto;
+    margin: 20px auto;
     line-height: 1.5;
     letter-spacing: 1.1px;
     text-align: center;
 
-    @media(max-width: $breakpoint-max-border) {
-      width: 80%;
+    @media(max-width: $breakpoint-desktop) {
+      width: 85%;
     }
-  }
-
-  &__content-section {
-    display: flex;
-    flex: 1;
   }
 
   &__divider {

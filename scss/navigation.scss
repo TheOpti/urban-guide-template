@@ -37,10 +37,6 @@
     border-bottom: 1px solid black;
     z-index: 1;
 
-    .navigation__bar {
-      width: 85%;
-    }
-
     .navigation__menu-item:hover:after,
     .navigation__menu-item:hover:before {
       border-color: black;

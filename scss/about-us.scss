@@ -1,8 +1,9 @@
 .about-us {
-  margin: 15px 0;
+  margin: 30px 0;
+  display: flex;
 
   &__about-left-col {
-    flex: 1;
+    flex: 4;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -22,12 +23,12 @@
 
   &__capabilities-list-item {
     font-weight: 600;
-    font-size: 48px;
+    font-size: 40px;
     line-height: 1.4;
   }
 
   &__about-right-col {
-    flex: 1;
+    flex: 6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,34 +39,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 30px;
     font-size: 24px;
-    flex: 1;
+    position: relative;
+    padding: 20px 0 20px 60px;
+    border-left: 7px solid #ccc;
+    width: 85%;
 
-    p {
-      position: relative;
-      padding: 20px 0 20px 60px;
-      border-left: 7px solid #ccc;
-      width: 85%;
-
-      &:before {
-        color: #ccc;
-        content: open-quote;
-        font-size: 75px;
-        position: absolute;
-        top: 16px;
-        left: 15px;
-      }
+    &:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 75px;
+      position: absolute;
+      top: 16px;
+      left: 15px;
     }
   }
 
   &__about-right-image {
+    margin-top: 50px;
     flex: 1;
     background-image: url("../assets/images/pic1.jpg");
     background-size: cover;
     width: 80%;
-    margin: 0 auto;
-    min-height: 250px;
+    max-height: 275px;
   }
-
 }
