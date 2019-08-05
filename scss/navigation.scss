@@ -2,6 +2,7 @@
 
 .navigation {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -56,11 +57,53 @@
   &__menu {
     display: flex;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint-desktop) {
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 70vw;
+      height: 100vh;
+      max-width: 324px;
+      flex-direction: column;
+      background-color: white;
+      color: black;
+      padding-top: 30px;
+      border-left: 1px solid black;
+      z-index: 20;
+      transition: transform 0.3s;
+      transform: translate(100%, 0);
+
+      &--open {
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  &__shadow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgb(52, 58, 64);
+    opacity: 0.0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+
+    &--open {
+      pointer-events: auto;
+      opacity: 0.6;
+    }
   }
 
   &__menu-btn {
     display: none;
-    font-size: 21px;
+    font-size: 20px;
     border: 1px solid white;
     border-radius: 10px;
     align-items: center;
@@ -69,6 +112,10 @@
     height: 36px;
     cursor: pointer;
     padding-right: 1px;
+
+    @media (max-width: $breakpoint-desktop) {
+      display: flex;
+    }
   }
 
   &__menu-item {
@@ -81,60 +128,56 @@
     align-items: center;
     font-weight: bold;
 
-    &:before {
-      box-sizing: border-box;
-      transform: translateX(100%);
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 99%;
-      height: 1px;
-      border-bottom: 1px solid transparent;
-      border-left: 1px solid transparent;
+    @media (max-width: $breakpoint-desktop) {
+      height: 54px;
+      padding-left: 20px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(189, 195, 199);
+      border-bottom-width: 1px;
     }
 
-    &:after {
-      box-sizing: border-box;
-      transform: translateX(-100%);
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 99%;
-      height: 1px;
-      border-top: 1px solid transparent;
-      border-right: 1px solid transparent;
-    }
-
-    &:hover {
-      cursor: pointer;
-
+    @media (min-width: $breakpoint-desktop) {
       &:before {
-        transition: 0.1s transform linear, 0.1s height linear 0.1s;
-        transform: translateX(0);
-        height: 100%;
+        box-sizing: border-box;
+        transform: translateX(100%);
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 99%;
+        height: 1px;
+        border-bottom: 1px solid transparent;
+        border-left: 1px solid transparent;
       }
 
       &:after {
-        transition: 0.1s transform linear 0.2s, 0.1s height linear 0.3s;
-        transform: translateX(0);
-        height: 100%;
+        box-sizing: border-box;
+        transform: translateX(-100%);
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99%;
+        height: 1px;
+        border-top: 1px solid transparent;
+        border-right: 1px solid transparent;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &:before {
+          transition: 0.1s transform linear, 0.1s height linear 0.1s;
+          transform: translateX(0);
+          height: 100%;
+        }
+
+        &:after {
+          transition: 0.1s transform linear 0.2s, 0.1s height linear 0.3s;
+          transform: translateX(0);
+          height: 100%;
+        }
       }
     }
   }
 }
-
-@media screen and (max-width: 1280px) {
-  .navigation {
-    &__menu {
-      position: absolute;
-      top: 60px;
-    }
-
-    &__menu-btn {
-      display: flex;
-    }
-  }
-}
-
