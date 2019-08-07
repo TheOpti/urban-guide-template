@@ -136,7 +136,7 @@
       border-bottom-width: 1px;
     }
 
-    @media (min-width: $breakpoint-desktop) {
+    @media (min-width: $breakpoint-desktop + 1) {
       &:before {
         box-sizing: border-box;
         transform: translateX(100%);
