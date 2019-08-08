@@ -1,28 +1,37 @@
 const NAVBAR_HEIGHT = 60;
 
-$(document).ready(() => {
-  const navBar = $('#nav-bar');
-  navBar.addClass("navigation--theme-default");
-
+document.addEventListener('DOMContentLoaded', () => {
+  const navBar = document.querySelector('#nav-bar');
   const menu = document.querySelector('.navigation__menu');
   const shadow = document.querySelector('.navigation__shadow');
-  const hamburgerMenuBtn = document.querySelector('.navigation__menu-btn');
+  const menuBtn = document.querySelector('.navigation__menu-btn');
 
-  navBar.on('click', (event) => {
-    if ($(event.target).hasClass('navigation__menu-item')) {
-      const elemOffset = $(`#${event.target.dataset.section}`).offset().top;
+  init();
 
-      $('html, body').animate({
-        scrollTop: elemOffset - NAVBAR_HEIGHT
-      }, 750);
+  function init() {
+    navBar.classList.add('navigation--theme-default');
+
+    document.addEventListener('scroll', changeNavBar);
+    navBar.addEventListener('click', handleNavbarClick);
+    menuBtn.addEventListener('click', openMenu);
+    shadow.addEventListener('click', closeMenu);
+
+    changeNavBar();
+    createMap();
+  }
+
+  function handleNavbarClick(event) {
+    if (event.target.classList.contains('navigation__menu-item')) {
+      const elementToScroll = document.querySelector(`#${event.target.dataset.section}`);
+      const elemOffset = elementToScroll.offsetTop;
+      console.log('elemOffset ', elemOffset);
+
+      window.scroll({
+        top: elemOffset - NAVBAR_HEIGHT,
+        behavior: 'smooth'
+      });
     }
-  });
-
-  hamburgerMenuBtn.addEventListener('click', openMenu);
-  shadow.addEventListener('click', closeMenu);
-
-  $(window).on('scroll', changeNavBar);
-  $(window).on('load', createMap);
+  }
 
   function openMenu() {
     menu.classList.toggle('navigation__menu--open');
@@ -36,11 +45,11 @@ $(document).ready(() => {
 
   function changeNavBar() {
     if (window.scrollY > 50) {
-      navBar.removeClass('navigation--theme-default');
-      navBar.addClass('navigation--theme-fixed');
+      navBar.classList.remove('navigation--theme-default');
+      navBar.classList.add('navigation--theme-fixed');
     } else {
-      navBar.removeClass('navigation--theme-fixed');
-      navBar.addClass('navigation--theme-default');
+      navBar.classList.remove('navigation--theme-fixed');
+      navBar.classList.add('navigation--theme-default');
     }
   }
 
@@ -53,13 +62,11 @@ $(document).ready(() => {
       scrollwheel: false
     };
 
-    const map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    const map = new google.maps.Map(document.getElementById('googleMap'), mapProp);
     const marker = new google.maps.Marker({
       position: mapProp.center
     });
 
     marker.setMap(map);
   }
-
-  changeNavBar();
 });
