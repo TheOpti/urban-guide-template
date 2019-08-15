@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     changeNavBar();
     createMap();
+    insertCurrentYear();
   }
 
   function handleNavbarClick(event) {
@@ -68,5 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     marker.setMap(map);
+  }
+
+  function insertCurrentYear() {
+    const currentYear = (new Date).getFullYear();
+    const yearSpan = document.querySelector('#year');
+    yearSpan.innerText = currentYear;
   }
 });
