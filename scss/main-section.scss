@@ -18,6 +18,14 @@
     flex-direction: column;
     padding: 0 60px;
     background: rgba(0,0,0,0.5);
+
+    @media (max-width: $breakpoint-desktop) {
+      padding: 0 40px;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 0 20px;
+    }
   }
 
   &__title {
@@ -27,14 +35,26 @@
     line-height: 1;
     letter-spacing: 0.5px;
 
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-xxl;
+    }
+
     @media (max-width: $breakpoint-tablet) {
-      font-size: $font-xl;
+      font-size: $font-l;
     }
   }
 
   &__description {
     text-align: center;
-    font-size: $font-m;
+    font-size: $font-l;
     margin-top: 30px;
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-m;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: $font-s;
+    }
   }
 }

@@ -29,7 +29,14 @@
     letter-spacing: 1px;
     font-weight: 600;
     font-size: $font-xxl;
-    margin-bottom: 20px;
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-xl;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: $font-l;
+    }
   }
 
   &__description {
@@ -43,6 +50,11 @@
 
     @media(max-width: $breakpoint-desktop) {
       width: 85%;
+      font-size: $font-s;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: $font-xs;
     }
   }
 

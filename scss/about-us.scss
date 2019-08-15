@@ -28,8 +28,14 @@
     color: #777;
     margin: 25px 0;
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-desktop) {
       font-size: $font-m;
+      margin: 20px 0;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: $font-s;
+      margin: 15px 0;
     }
   }
 
@@ -42,8 +48,12 @@
     font-size: $font-xl;
     line-height: 1.4;
 
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-l;
+    }
+
     @media (max-width: $breakpoint-tablet) {
-      font-size: $font-m;
+      font-size: $font-s;
     }
   }
 
@@ -72,10 +82,20 @@
       position: absolute;
       top: 16px;
       left: 15px;
+
+      @media (max-width: $breakpoint-desktop) {
+        font-size: $font-3xl;
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: $font-xxl;
+      }
     }
 
     @media (max-width: $breakpoint-tablet) {
+      padding: 20px 0 20px 40px;
       margin: 25px 0;
+      font-size: $font-s;
     }
   }
 

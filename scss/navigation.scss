@@ -52,6 +52,14 @@
     align-items: center;
     user-select: none;
     cursor: default;
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-l;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: $font-m;
+    }
   }
 
   &__menu {

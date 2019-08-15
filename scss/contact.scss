@@ -39,23 +39,43 @@
     @media(max-width: $breakpoint-desktop) {
       padding: 20px 0 40px 70px;
     }
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 20px 0 40px 30px;
+    }
   }
 
   &__company-name {
     font-family: 'trenchthin', sans-serif;
     font-size: $font-3xl;
     margin: 20px 0;
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-xxl;
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: $font-l;
+    }
   }
 
   &__company-address {
     font-size: $font-s;
     line-height: 1.15;
     margin: 10px 0;
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-xs;
+    }
   }
 
   &__company-emails {
     font-size: $font-s;
     margin: 10px 0;
+
+    @media (max-width: $breakpoint-desktop) {
+      font-size: $font-xs;
+    }
   }
 
   &__company-emails-row {

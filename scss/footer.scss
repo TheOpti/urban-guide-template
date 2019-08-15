@@ -22,6 +22,7 @@
 
     @media(max-width: $breakpoint-desktop) {
       text-align: center;
+      font-size: $font-m;
     }
   }
 
@@ -39,6 +40,10 @@
     align-items: center;
     margin: 10px 0 20px -5px;
     font-size: $font-s;
+
+    @media(max-width: $breakpoint-tablet) {
+      font-size: $font-xs;
+    }
   }
 
   &__source-code-info {
@@ -50,7 +55,7 @@
   }
 
   &__email-line {
-    margin-top: 20px;
+    margin: 20px 0;
   }
 
   &__created-by {
