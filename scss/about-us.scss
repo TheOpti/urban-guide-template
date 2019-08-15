@@ -22,14 +22,14 @@
   }
 
   &__capabilities {
-    font-size: 36px;
+    font-size: $font-l;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #777;
     margin: 25px 0;
 
     @media (max-width: $breakpoint-tablet) {
-      font-size: 28px;
+      font-size: $font-m;
     }
   }
 
@@ -39,11 +39,11 @@
 
   &__capabilities-list-item {
     font-weight: 600;
-    font-size: 40px;
+    font-size: $font-xl;
     line-height: 1.4;
 
     @media (max-width: $breakpoint-tablet) {
-      font-size: 28px;
+      font-size: $font-m;
     }
   }
 
@@ -59,7 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: $font-m;
     position: relative;
     padding: 20px 0 20px 60px;
     border-left: 7px solid #ccc;
@@ -68,7 +68,7 @@
     &:before {
       color: #ccc;
       content: open-quote;
-      font-size: 75px;
+      font-size: $font-4xl;
       position: absolute;
       top: 16px;
       left: 15px;

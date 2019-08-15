@@ -7,7 +7,7 @@
 
   &__what-we-do {
     margin: 35px 0;
-    font-size: 42px;
+    font-size: $font-xl;
     font-weight: 900;
   }
 
@@ -126,20 +126,20 @@
 
   &__icon {
     margin-bottom: 35px;
-    font-size: 80px;
+    font-size: $font-4xl;
 
     @media(max-width: $breakpoint-desktop) {
-      font-size: 64px;
+      font-size: $font-3xl;
     }
   }
 
   &__icon-title {
-    font-size: 22px;
+    font-size: $font-m;
     color: black;
     transition: color 0.5s;
 
     @media(max-width: $breakpoint-desktop) {
-      font-size: 20px;
+      font-size: $font-s;
     }
   }
 }

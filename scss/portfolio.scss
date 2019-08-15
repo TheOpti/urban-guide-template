@@ -127,11 +127,11 @@
   }
 
   &__title {
-    font-size: 28px;
+    font-size: $font-m;
   }
 
   &__description {
-    font-size: 18px;
+    font-size: $font-xs;
     margin-top: 10px;
     width: 70%;
     text-align: center;

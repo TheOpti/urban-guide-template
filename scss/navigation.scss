@@ -46,7 +46,7 @@
 
   &__logo {
     font-family: 'trenchthin', sans-serif;
-    font-size: 40px;
+    font-size: $font-xl;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -103,7 +103,7 @@
 
   &__menu-btn {
     display: none;
-    font-size: 20px;
+    font-size: $font-s;
     border: 1px solid white;
     border-radius: 10px;
     align-items: center;

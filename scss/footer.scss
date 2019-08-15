@@ -14,7 +14,7 @@
 
   &__logo {
     font-family: 'trenchthin', sans-serif;
-    font-size: 32px;
+    font-size: $font-l;
     font-weight: bold;
     user-select: none;
     cursor: default;
@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     margin: 10px 0 20px -5px;
-    font-size: 20px;
+    font-size: $font-s;
   }
 
   &__source-code-info {
@@ -46,13 +46,11 @@
   }
 
   &__address-line {
-    display: block;
     margin: 7px 0;
+  }
 
-    &:last-of-type {
-      display: block;
-      margin: 20px 0;
-    }
+  &__email-line {
+    margin-top: 20px;
   }
 
   &__created-by {
@@ -84,7 +82,7 @@
     width: 38px;
     height: 38px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: $font-xs;
     margin: 0 0 0 10px;
 
     @media(max-width: $breakpoint-tablet) {

@@ -28,14 +28,14 @@
   &__title {
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: 54px;
+    font-size: $font-xxl;
     margin-bottom: 20px;
   }
 
   &__description {
     width: 100%;
     max-width: 1200px;
-    font-size: 22px;
+    font-size: $font-s;
     margin: 20px auto;
     line-height: 1.5;
     letter-spacing: 1.1px;
