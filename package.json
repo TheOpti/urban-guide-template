@@ -20,7 +20,7 @@
   "homepage": "https://github.com/TheOpti/urban-guide-template#readme",
   "devDependencies": {
     "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^3.4.1",
     "gulp-inject": "^4.3.2",
